@@ -1,0 +1,29 @@
+.not_found_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.not_found_img {
+  width: 30%;
+}
+
+.light_heading {
+  color: black;
+  font-weight: bold;
+}
+.dark_heading {
+  color: white;
+  font-weight: bold;
+}
+
+.light_para {
+  color: black;
+  font-weight: bold;
+}
+
+.dark_para {
+  color: white;
+  font-weight: bold;
+}

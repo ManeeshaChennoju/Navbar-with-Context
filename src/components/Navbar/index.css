@@ -1,0 +1,40 @@
+.navbar_container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.website_logo {
+  width: 100px;
+  height: 80px;
+}
+
+.ul_items {
+  display: flex;
+  align-items: center;
+}
+
+.li_item {
+  margin-right: 15px;
+  font-size: 25px;
+  font-weight: bold;
+  list-style-type: none;
+}
+
+.link_item {
+  text-decoration: none;
+}
+
+.theme_button {
+  background-color: transparent;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.theme_image {
+  width: 70px;
+  height: 70px;
+}
