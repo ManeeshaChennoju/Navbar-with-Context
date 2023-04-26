@@ -1,3 +1,4 @@
+import ThemeContext from '../../context/ThemeContext'
 import Navbar from '../Navbar'
 import './index.css'
 
@@ -9,10 +10,24 @@ const darkThemeAboutImg =
 const About = () => (
   <>
     <Navbar />
-    <div className="about_container">
-      <img src={lightThemeAboutImg} alt="about" className="about_img" />
-      <h1 className="about_heading">About</h1>
-    </div>
+    <ThemeContext.Consumer>
+      {value => {
+        const {isDarkTheme} = value
+        const aboutBgClassName = isDarkTheme
+          ? 'dark_about_bg'
+          : 'light_about_bg'
+        const aboutImage = isDarkTheme ? darkThemeAboutImg : lightThemeAboutImg
+        const aboutClassName = isDarkTheme
+          ? 'light_about_heading'
+          : 'dark_about_heading'
+        return (
+          <div className={aboutBgClassName}>
+            <img src={aboutImage} alt="about" className="about_img" />
+            <h1 className={aboutClassName}>About</h1>
+          </div>
+        )
+      }}
+    </ThemeContext.Consumer>
   </>
 )
 

@@ -1,4 +1,5 @@
 import Navbar from '../Navbar'
+import ThemeContext from '../../context/ThemeContext'
 import './index.css'
 
 const lightThemeHomeImg =
@@ -9,10 +10,22 @@ const darkThemeHomeImg =
 const Home = () => (
   <>
     <Navbar />
-    <div className="Home_container">
-      <img src={lightThemeHomeImg} alt="home" className="Home_img" />
-      <h1 className="home_heading">Home</h1>
-    </div>
+    <ThemeContext.Consumer>
+      {value => {
+        const {isDarkTheme} = value
+        const homeBgClassName = isDarkTheme ? 'dark_home_bg' : 'light_home_bg'
+        const homeImage = isDarkTheme ? darkThemeHomeImg : lightThemeHomeImg
+        const HeadingClassName = isDarkTheme
+          ? 'light_home_heading'
+          : 'dark_home_heading'
+        return (
+          <div className={homeBgClassName}>
+            <img src={homeImage} alt="home" className="Home_img" />
+            <h1 className={HeadingClassName}>Home</h1>
+          </div>
+        )
+      }}
+    </ThemeContext.Consumer>
   </>
 )
 

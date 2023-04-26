@@ -1,17 +1,37 @@
 /* Write your CSS here */
-.about_container {
+
+.dark_about_bg {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: black;
+  height: 100vh;
+}
+
+.light_about_bg {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  height: 100vh;
 }
 
 .about_img {
   width: 20%;
 }
 
-.about_heading {
+.light_about_heading {
+  color: white;
   font-size: 30px;
   font-weight: bold;
   font-family: 'Roboto';
+}
+
+.dark_about_heading {
+  font-size: 30px;
+  font-weight: bold;
+  font-family: 'Roboto';
+  color: black;
 }

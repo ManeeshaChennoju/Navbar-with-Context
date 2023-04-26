@@ -1,17 +1,37 @@
 /* Write your CSS here */
-.Home_container {
+
+.dark_home_bg {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: black;
+  height: 100vh;
+}
+
+.light_home_bg {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  height: 100vh;
 }
 
 .Home_img {
   width: 20%;
 }
 
-.home_heading {
+.light_home_heading {
+  color: white;
   font-size: 30px;
   font-weight: bold;
   font-family: 'Roboto';
+}
+
+.dark_home_heading {
+  font-size: 30px;
+  font-weight: bold;
+  font-family: 'Roboto';
+  color: black;
 }

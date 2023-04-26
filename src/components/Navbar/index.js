@@ -19,7 +19,7 @@ class Navbar extends Component {
         {value => {
           const {isDarkTheme, toggleTheme} = value
           const navbarBgclassname = isDarkTheme ? 'dark_nav_bg' : 'light_nav_bg'
-          const navLogoImg = isDarkTheme ? lightThemeLogo : darkThemeLogo
+          const navLogoImg = isDarkTheme ? darkThemeLogo : lightThemeLogo
           const ulItemsClass = isDarkTheme ? 'light_nav_item' : 'dark_nav_items'
           const themeButton = isDarkTheme ? lightThemeButton : darkThemeButton
 
@@ -30,19 +30,19 @@ class Navbar extends Component {
                 src={navLogoImg}
                 alt="website logo"
               />
-              <ul className="ul_items">
+              <ul className="ul_items_container">
                 <Link to="/" className="link_item">
-                  <li className="ul_items_class">Home</li>
+                  <li className={ulItemsClass}>Home</li>
                 </Link>
                 <Link to="/about" className="link_item">
-                  <li className="ul_items_class">About</li>
+                  <li className={ulItemsClass}>About</li>
                 </Link>
               </ul>
               <button
                 className="theme_button"
                 type="button"
                 data-testid="theme"
-                onClick={this.toggleTheme}
+                onClick={toggleTheme}
               >
                 <img className="theme_image" src={themeButton} alt="theme" />
               </button>
